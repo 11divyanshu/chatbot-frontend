@@ -10,6 +10,9 @@
 <body style="height:100%">
 <div class="row" style="">
 <div class="col-md-2">
+<div style="width:150px;height:auto;position:fixed;top:30px;left:30px;color:#ccc;background-color:#23196f;border-radius:10px;padding:10px;" id="dt">
+<script>window.setInterval(function(){var today = new Date();document.getElementById('dt').innerHTML ='DATE : '+today.getDate()+'-'+today.getMonth()+'-'+today.getFullYear()+'\n'+'TIME : '+today.getHours()+':'+today.getMinutes()+':'+today.getSeconds()},0);</script>
+</div>
 <div class="" id="udbox" style="background-color:#23196f;position:fixed;bottom:60px;left:10px;width:200px;height:500px;border-radius:20px;padding:20px;">
 
 </div>
@@ -27,16 +30,16 @@
 </div>
 </div>
 <div class="container col-sm-6" style="margin-top:2%;">
-    <h1 class="text-center" style="color:#333;font-family:headingfont;border-top:solid black 1px;border-left:solid black 1px;border-right:solid black 1px;padding:6px;">GENESIS CHATBOT</h1>
+    <h1 class="text-center" style="color:#333;font-family:headingfontx;color:#ccc;background-color:#23196f;border-radius:10px;padding:10px;">GENESIS CHATBOT</h1>
 <div class="">
     <div class="">
         <div class="" onmouseover="hs();" onmouseout="hc();" style="border-radius:10px;margin-bottom:0%;">
-            <div id="chatbox" class="border border-success" style="overflow-x:hidden;overflow-y:auto;height:560px;font:headingfont;margin-top:0%;">
+            <div id="chatbox" class="" style="overflow-x:hidden;overflow-y:auto;height:560px;font:headingfont;margin-top:0%;border:solid #23196f 2px;;border-radius:10px;">
                 <div class="row"><div class="col-md-1" style="margin:4px;margin-right:0px;"><img src="/static/bot.png" width="36px"></div><div class="col-md-8" style="margin-top:8px;width:auto;"><p class="botText"><span>Hi! I'm Loqu the bot</span></p></div></div>
             </div>
         </div>
-        <div class="" style="border-bottom:solid black 1px;border-left:solid black 1px;border-right:solid black 1px;">
-            <div class="row" id="userInput" style="padding-bottom:2%;;margin-top:4%;">
+        <div class="" style="border:solid #23196f 2px;;border-radius:10px;margin-top:2%;">
+            <div class="row" id="userInput" style="padding-bottom:2%;margin-top:2%;">
             <div class="col-md-10" style="margin-left:1%;">
                 <input id="textInput" style="border-radius:40px;" class="form-control" type="text" name="msg" placeholder="Type Your Message Here">
             </div>
