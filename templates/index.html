@@ -4,26 +4,44 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="../static/style1.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-<body style="background:radial-gradient(#f7fd81, #fbe521);">
-<div class="container col-sm-6 offset-sm-3" style="margin-top:2%;">
-    <h1 class="jumbotron text-center" style="background-color:rgba(23,230,255,0.8);color:#333;font-family:headingfont">GENESIS CHATBOT</h1>
+<body style="height:100%">
+<div class="row" style="">
+<div class="col-md-2">
+<div class="" id="udbox" style="background-color:#23196f;position:fixed;bottom:60px;left:10px;width:200px;height:500px;border-radius:20px;padding:20px;">
+
+</div>
+<div style="width:200px;height:40px;position:fixed;bottom:10px;left:10px;color:#ccc;background-color:#23196f;border-radius:10px;">
+<div class="" style="padding:8px;padding-left:20px;cursor:pointer;">
+<div class="row">
+<div class="col-md-8">
+<span style="margin-top:20px;">KNOW MORE</span>
+</div>
+<div class="col-md-4 uparr" id="udarr" onclick="udf();" style="width:20px;">
+<img src="/static/frame.png" width="20px" height="20px">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container col-sm-6" style="margin-top:2%;">
+    <h1 class="text-center" style="color:#333;font-family:headingfont;border-top:solid black 1px;border-left:solid black 1px;border-right:solid black 1px;padding:6px;">GENESIS CHATBOT</h1>
 <div class="">
     <div class="">
-        <div class="" onhover="hstp();" style="border-radius:10px;">
-            <div id="chatbox" class="border border-success" style="overflow-x:hidden;overflow-y:auto;height:400px;font:headingfont;">
-                <p class="botText"><span>Hi! I'm Genesis the bot</span></p>
+        <div class="" onmouseover="hs();" onmouseout="hc();" style="border-radius:10px;margin-bottom:0%;">
+            <div id="chatbox" class="border border-success" style="overflow-x:hidden;overflow-y:auto;height:560px;font:headingfont;margin-top:0%;">
+                <div class="row"><div class="col-md-1" style="margin:4px;margin-right:0px;"><img src="/static/bot.png" width="36px"></div><div class="col-md-8" style="margin-top:8px;width:auto;"><p class="botText"><span>Hi! I'm Loqu the bot</span></p></div></div>
             </div>
         </div>
-        <div class="" style="">
-            <div class="row" id="userInput" style="margin-bottom:20%;margin-top:4%;">
-            <div class="col-md-10">
+        <div class="" style="border-bottom:solid black 1px;border-left:solid black 1px;border-right:solid black 1px;">
+            <div class="row" id="userInput" style="padding-bottom:2%;;margin-top:4%;">
+            <div class="col-md-10" style="margin-left:1%;">
                 <input id="textInput" style="border-radius:40px;" class="form-control" type="text" name="msg" placeholder="Type Your Message Here">
             </div>
             <div class="col-md-2" style="margin-left:-2%">
-                <input id="buttonInput" class="btn btn-success form-control" type="submit" value="Send">
+                <input id="buttonInput" style="border-radius:20%;border-radius:10px;" class="btn btn-success form-control" type="submit" value="Send">
             </div>
             </div>
         </div>
@@ -31,12 +49,12 @@
 <script>
     function getResponse() {
         let userText = $("#textInput").val();
-        let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
+        let userHtml = '<div class="row" style="margin-right:-74px;text-align:right;"><div class="col-md-2"></div><div class="col-sm-8" style="margin-top:2px;"><p class="userText"><span>' + userText + '</span></p></div><div class="col-md-1" style="margin-left:-12px;"><img src="/static/you.png" width="36px"></div></div>';
         $("#textInput").val("");
         $("#chatbox").append(userHtml);
         document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
         $.get("/get", { msg: userText }).done(function(data) {
-        var botHtml = '<p class="botText"><span>' + data + '</span></p>';
+        var botHtml = '<div class="row"><div class="col-md-1" style="margin:4px;margin-right:0px;"><img src="/static/bot.png" width="36px"></div><div class="col-md-8 botText" style="margin-top:8px;"><p class="botText"><span>' + data + '</span></p></div></div>';
         $("#chatbox").append(botHtml);
         document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
 });
@@ -45,6 +63,7 @@
     //if enter key is pressed
         if(e.which == 13) {
             clicck();
+			allow=1;
             getResponse();
         }
     });
@@ -58,17 +77,85 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </div>
 </div>
+<div class="col-sm-3">
+<div>
+<img src="/static/botanimation.gif" width="100%">
+</div>
+<div class="" id="lrbox" style="background-color:#23196f;position:fixed;bottom:30px;right:60px;width:200px;height:500px;border-radius:20px;padding:20px;">
+
+</div>
+<div class="" style="background-color:#23196f;color:#ccc;position:fixed;bottom:250px;right:10px;width:40px;height:280px;border-radius:10px;padding:14px;cursor:pointer;">
+<span style="margin-top:20px;">K<br>N<br>O<br>W<br> <br>M<br>O<br>R<br>E</span>
+<div class="col-md-4 larr" id="lrarr" onclick="lrf();" style="width:20px;margin-left:-8px;margin-top:10px;">
+<img src="/static/frame.png" width="20px" height="20px">
+</div>
+</div>
+</div>
+</div>
 <script>
-function clicck(){
-/*window.setInterval(function() {
+var ud = 1;
+var lr = 1;
+var udboxid = document.getElementById('udbox');
+udboxid.style.visibility='hidden';
+var lrboxid = document.getElementById('lrbox');
+lrboxid.style.visibility='hidden';
+function udf()
+{
+if(ud==1)
+{
+ud=0;
+var divid = document.getElementById('udarr');
+divid.classList.remove('uparr');
+divid.classList.add('dwarr');
+udboxid.style.visibility='visible';
+}
+else
+{
+ud=1;
+var divid = document.getElementById('udarr');
+divid.classList.remove('dwarr');
+divid.classList.add('uparr');
+udboxid.style.visibility='hidden';
+}
+}
+function lrf()
+{
+if(lr==1)
+{
+lr=0;
+var divid = document.getElementById('lrarr');
+divid.classList.remove('larr');
+divid.classList.add('rarr');
+lrboxid.style.visibility='visible';
+}
+else
+{
+lr=1;
+var divid = document.getElementById('lrarr');
+divid.classList.remove('rarr');
+divid.classList.add('larr');
+lrboxid.style.visibility='hidden';
+}
+}
+</script>
+<script>
+var allow=1;
+function clicck()
+{
+if(allow == 1)
+{
   var elem = document.getElementById('chatbox');
   elem.scrollTop = elem.scrollHeight;
-}, 0);*/
 }
-function hstp()
+}
+window.setInterval(function(){clicck();},0);
+function hs()
 {
-    allow=0;
-    alert('hi');
+allow=0;
+}
+function hc()
+{
+allow=1;
 }
 </script>
 </body>

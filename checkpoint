@@ -1,2 +1,2 @@
-model_checkpoint_path: "E:\\ecell\\chatbot_flask-master\\model.tflearn"
-all_model_checkpoint_paths: "E:\\ecell\\chatbot_flask-master\\model.tflearn"
+model_checkpoint_path: "E:\\ecell\\chatbot-frontend\\model.tflearn"
+all_model_checkpoint_paths: "E:\\ecell\\chatbot-frontend\\model.tflearn"
