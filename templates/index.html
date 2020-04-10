@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/style1.css">
+    <link rel="stylesheet" href="/static/style0.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body style="height:100%">
@@ -57,7 +57,7 @@
         $("#chatbox").append(userHtml);
         document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
         $.get("/get", { msg: userText }).done(function(data) {
-        var botHtml = '<div class="row"><div class="col-md-1" style="margin:4px;margin-right:0px;"><img src="/static/bot.png" width="36px"></div><div class="col-md-8 botText" style="margin-top:8px;"><p class="botText"><span>' + data + '</span></p></div></div>';
+        var botHtml = '<div class="row"><div class="col-md-1" style="margin:4px;margin-right:0px;"><img src="/static/bot.png" width="36px"></div><div class="col-md-8" style="margin-top:8px;width:auto;"><p class="botText"><span>' + data + '</span></p></div></div>';
         $("#chatbox").append(botHtml);
         document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
 });
