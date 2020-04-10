@@ -9,7 +9,7 @@
     text-align: right;
     line-height: 30px;
     display:inline-block;
-    min-width:100px;
+    min-width:10px;
     background-color: #02c512;
     border-radius: 10px;
     padding:10px;
@@ -27,7 +27,7 @@
     background-color: rgb(230, 0, 76);
     border-radius: 10px;
     display:inline-block;
-    min-width:100px;
+    min-width:10px;
     padding:10px;
 }
 .botText span {
