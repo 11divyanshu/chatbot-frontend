@@ -18,7 +18,7 @@
 
         {"tag": "name",
          "patterns": ["whats your name","Who are you ?", "ur name", "name ?","your name ?","can i get your name ","i want your name","tell me about yourself","describe yourself","introduction"],
-         "responses": ["I am Genesis the bot.", "My name is Genesis the bot, Nice to meet you","hey !!, i am Genesis the bot."],
+         "responses": ["I am Genesis the bot. I am from UIT, RGPV, Computer Science Department", "My name is Genesis the bot I am from UIT, RGPV, Computer Science Department, Nice to meet you","hey !!, i am Genesis the bot. I am from UIT, RGPV, Computer Science Department"],
          "context_set": ""
         },
 
@@ -109,8 +109,8 @@
 
 
         {"tag": "count",
-         "patterns": ["what is the count of total number of cases in world","total number of cases","live count of patients","total no. of confirmed cases"],
-         "responses": ["See, currently I am working statically and my data is also static so when I was last updated, there were 972,640 confirmed cases with 50,325 deaths in whole world."],
+         "patterns": ["what is the current count of codiv-19","what is the count of total number of cases in world","total number of cases","live count of patients","total no. of confirmed cases"],
+         "responses": ["Presently there are 63,420 confirmed , 41,879 active, 19,428 recovered and 2,109 death cases"],
          "context_set": ""
         },
 
